@@ -54,7 +54,10 @@ header{
 }
 
 #carPic{
-  margin: 50px 0px 50px 0px;
+  margin: 50px 0px 10px 0px;
+  height: 250px;
+  width: 300px;
+  border-radius: 25px;
 }
 
 #intro{
@@ -63,6 +66,11 @@ header{
 
 #title{
   color: white;
+}
+
+#arrow{
+  font-size: 30px;
+  margin-top: : 0;
 }
 
 .button {
