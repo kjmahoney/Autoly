@@ -1,5 +1,6 @@
 *{
   margin: 0;
+  font-family: 'Varela', sans-serif;
 }
 
 html{
@@ -219,4 +220,10 @@ header{
   left:320px;
   width:20px;
   height:20px;
+}
+
+/* arrow css*/
+.arrow {
+  opacity: .1;
+  /*filter: alpha(opacity=50);*/
 }
