@@ -89,6 +89,7 @@ header{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
 }
 
 .column> form{
@@ -119,10 +120,11 @@ header{
 }
 
 /* Status Page CSS */
+.bodyContainer{
+  display: flex;
+  justify-content: center;
+}
 .driverInfo {
-  position: absolute;
-  top: 150px;
-  right: 600px;
   display: flex;
   flex-direction: column;
 
@@ -247,7 +249,7 @@ header{
 .input_img {
   position:absolute;
   bottom:6px;
-  left:400px;
+  left:300px;
   width:20px;
   height:20px;
 }

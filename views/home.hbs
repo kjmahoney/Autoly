@@ -4,9 +4,7 @@
 <div class="column">
   <h3 id = "intro">Hi {{name}}</h3>
 
-<div id="notification" style="display: none;">
-  <span class="dismiss"><a title="dismiss this notification">x</a></span>
-</div>
+
 
 <div class="row">
 <a id ="arrow" href="#" onclick = "changeCarLeft()">←</a>
@@ -18,14 +16,7 @@
 
 </div>
 
-
-
 <script>
-setTimeout(function (){
-  $("#notification").fadeIn("slow").append('Your driver is on the way. Eta 5 minutes')}, 3000 )
-  $(".dismiss").click(function(){
-       $("#notification").fadeOut("slow");
-});
 
 function changeCarRight(){
   console.log("worked")
@@ -37,6 +28,7 @@ function changeCarLeft(){
 $('#carPic').attr("src", "http://st.automobilemag.com/uploads/sites/11/2015/11/2016-Nissan-Altima-SR-rear-end-02.jpg")
 }
 </script>
+
 
 
 <!-- {{carMake}}

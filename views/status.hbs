@@ -5,18 +5,18 @@
     <title></title>
   </head>
 <body class="statusPage">
-  
+  <div class="bodyContainer">
     <div class="form-style-2">
   <div class="form-style-2-heading">Pick-up confirmed at: 11:00am December 13th 2016</div>
 
   <form action="" method="post">
 
   <div class="input_container">
-    <label for="field1"><span>Pickup</span><input type="text" class="input-field" name="field1" value="" /></label>
+    <label for="field1"><span>Pickup</span><input type="text" class="input-field" name="field1" value="229 G Street SW" /></label>
     <img src="https://image.freepik.com/free-icon/home_318-42210.jpg" class="input_img">
   </div>
   <div class="input_container">
-    <label for="field2"><span>DropOff</span><input type="text" class="input-field" name="field2" value="" /></label>
+    <label for="field2"><span>DropOff</span><input type="text" class="input-field" name="field2" value="516 Main Street" /></label>
     <img src="http://www.brothersautomotive.org/img/2236/155.png?sitetimestamp=636079452870000000" class="input_img">
   </div>
 
@@ -32,15 +32,24 @@
 
 
 
-<div class="column">
+<!-- <div class="column"> -->
 
 
   <div class="driverInfo">
   <img id="driverImg" src="{{randDriver.img_url}}">
   <span>{{randDriver.firstName}} is on the way!</span>
+  </div>
 </div>
-
+<!-- </div> -->
+<div id="notification" style="display: none;">
+  <span class="dismiss"><a title="dismiss this notification">x</a></span>
 </div>
-
 </body>
+<script>
+setTimeout(function (){
+  $("#notification").fadeIn("slow").append('Your driver is on the way. Eta 5 minutes')}, 3000 )
+  $(".dismiss").click(function(){
+       $("#notification").fadeOut("slow");
+});
+</script>
 </html>
