@@ -56,8 +56,8 @@ var seed = function(){
   Kevin.newCar(Altima)
   Users.push(Kevin, Khoi)
 
-  const Jay = new Driver("Jay", "Corleone", "https://v.cdn.vine.co/r/avatars/A9A28624571289204044023345152_4d7d328af95.5.0.jpg?versionId=SR7_.t9s6hbVupWkYtWeAssU84xErvhl", 1 )
-  const Thomas = new Driver ("Thomas", "Smith", "https://lh4.googleusercontent.com/-iMBIAcdmRPs/UcseOYiTWtI/AAAAAAAAAGo/5Aq8-QwldHo/w1024-h614/good-bye-love.jpg", 2)
+  const Jay = new Driver("Jay", "Corleone", "http://www.thesimpledollar.com/wp-content/uploads/2014/11/uber-driver-600x400.jpg", 1 )
+  const Thomas = new Driver ("Thomas", "Smith", "https://expertbeacon.com/sites/default/files/obtaining_affordable_auto_insurance_as_a_high-risk_driver.jpg", 2)
   Drivers.push(Jay, Thomas)
 
 }
