@@ -1,14 +1,16 @@
 var Users = []
 var Drivers = []
+var Addresses = []
 
 class User{
-  constructor(firstName, lastName, homeAddress, workAddress, phone, id){
+  constructor(firstName, lastName, homeAddress, workAddress, phone, id, dropOffAddress){
     this.firstName = firstName,
     this.lastName = lastName,
     this.homeAddress = homeAddress,
     this.workAddress = workAddress,
     this.phone = phone,
     this.id = id,
+    this.dropOffAddress = dropOffAddress,
     this.vehicle = []
   }
   newCar(car){
@@ -19,7 +21,6 @@ class User{
   //   var car2 = new Vehicle(make, model, color, plateID, plateState)
   //   this.vehicle.push(car2)
 
-
 }
 class Driver{
   constructor(firstName, lastName, img_url, id){
@@ -27,7 +28,6 @@ class Driver{
     this.lastName = lastName,
     this.img_url = img_url,
     this.id = id
-
   }
 }
 
@@ -41,11 +41,13 @@ class Vehicle{
     this.imgUrl = imgUrl
   }
 }
-
+function populate(seedData){
+ console.log(seedData)
+}
 
 var seed = function(){
-  const Kevin = new User("Kevin", "Mahoney", "229 G Street SW", "228 North Arlington", 1234567890, 1)
-  const Khoi = new User("Khoi", "Le", "123 H Street NW", "229 North Arlington", 1234567891, 2)
+  const Kevin = new User("Kevin", "Mahoney", "229 G Street SW", "228 North Arlington", 1234567890, 1, "516 Main Street")
+  const Khoi = new User("Khoi", "Le", "123 H Street NW", "229 North Arlington", 1234567891, 2, "2122 Alpaca Ave" )
 
   const Accord = new Vehicle("Honda", "Accord", "Red","JXH-7345", "VA", "http://www.egmcartech.com/wp-content/uploads/2012/09/2013hondaaccord-04.jpg")
   const Altima = new Vehicle("Nissan", "Altima", "White","VRG-6789", "DC", "http://www.nissanusa.com/dam/nissan/vehicles/cars/altima/2017/overview/accessories/2016-nissan-altima-rear-decklid-spoiler-large.jpg")
@@ -61,8 +63,10 @@ var seed = function(){
 }
 
 
+
 seed()
 module.exports = {
 Users: Users,
-Drivers: Drivers
+Drivers: Drivers,
+populate
 }

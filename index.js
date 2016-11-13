@@ -2,6 +2,7 @@ var express = require("express")
 var app = express();
 var hbs = require("hbs")
 var seedData = require("./seed.js")
+// var populate = require("./seed.js")
 
 app.use(express.static("public"))
 
@@ -11,8 +12,9 @@ app.get("/confirmation", (req, res) => {
   var user = seedData.Users[0]
   var homeAddress = user.homeAddress
   var workAddress = user.workAddress
+  var dropOffAddress = user.dropOffAddress
   res.render("confirmation", {user: user, priceEstimate:priceEstimate, homeAddress:homeAddress,
-    workAddress:workAddress})
+    workAddress:workAddress, dropOffAddress: dropOffAddress})
 })
 
 //CHECKOUT: PAGE 3-Reaffirm transaction
@@ -33,6 +35,7 @@ app.get("/status", (req, res) => {
 app.get("/:id", (req, res) => {
   //cycle through customers to find id match
   var customers = seedData.Users
+
   for (i = 0; i<customers.length; i++){
     if (req.params.id == customers[i].id){
       var name = customers[i].firstName
@@ -48,9 +51,9 @@ app.get("/:id", (req, res) => {
       var carPhoto = customers[i].vehicle[p].imgUrl
     }
   }
-  res.render("home", {name: name, carMake:carMake, carModel:carModel,
-    carColor:carColor, carPlate:carPlate, carState:carState, carPhoto:carPhoto})
-  })
+
+  res.render("home", {name: name, carMake:carMake, carModel:carModel, carColor:carColor, carPlate:carPlate, carState:carState, carPhoto:carPhoto})
+})
 //______________________________
 
 app.set("view engine", "hbs")

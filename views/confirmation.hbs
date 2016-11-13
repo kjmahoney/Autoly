@@ -6,22 +6,31 @@
     <script src = "./seed.js"></script>
   </head>
   <body>
-
     <p>Price Estimate: ${{priceEstimate}}</p>
     <p>Scheduled Pick up at: </p>
+      <form>
+        Address
+        <select id="addressList">
+          <option>Home: {{homeAddress}}</option>
+          <option>Work: {{workAddress}}</option>
+        </select>
+        <button type="button" name="button">+</button>
+      </form>
+    <p>Scheduled Drop off at: </p>
+      <form>
+        Address
+        <select id="addressList">
+          <option>Curry's Service: {{homeAddress}}</option>
+          <option>Jiffy Lube: {{dropOffAddress}}</option>
+        </select>
+        <button class="populateButton" type="button" name="button">+</button>
+      </form>
 
-    <form>
-      Address
-      <select id="addressList">
-        <option>Home: {{homeAddress}}</option>
-        <option>Work: {{workAddress}}</option>
-      </select>
-      <a class = "sub" href="#">+</a>
-    </form>
-
-    <div class="arriveDateWrapper fieldWrapper">
+      <form class="" method="post">
+        <div class="arriveDateWrapper fieldWrapper">
         Date: <input class="arriveDate" name="arriveDate" type="date" placeholder="What date?" />
-    </div>
+        </div>
+    </form>
 
     <form>
       <label for="timeBox">Time</label>
@@ -34,14 +43,14 @@
     </form>
 
     <div class="arriveWrapper">
-
             <div class="clear"></div>
-        </div>
-
+    </div>
 
     <a href="/checkout">
       <button type="button" value = "confirm">Confirm</button>
     </a>
-
+<script>
+ $(".populateButton").on("click", seedData.populate())
+</script>
   </body>
 </html>
