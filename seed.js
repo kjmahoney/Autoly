@@ -41,9 +41,9 @@ class Vehicle{
     this.imgUrl = imgUrl
   }
 }
-function populate(seedData){
- console.log(seedData)
-}
+// function populate(seedData){
+//  console.log(seedData)
+// }
 
 var seed = function(){
   const Kevin = new User("Kevin", "Mahoney", "229 G Street SW", "228 North Arlington", 1234567890, 1, "516 Main Street")
@@ -68,5 +68,4 @@ seed()
 module.exports = {
 Users: Users,
 Drivers: Drivers,
-populate
 }
