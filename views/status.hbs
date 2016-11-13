@@ -37,7 +37,7 @@
 
   <div class="driverInfo">
   <img id="driverImg" src="{{randDriver.img_url}}">
-  <span>{{randDriver.firstName}} is on the way!</span>
+  <span>{{randDriver.firstName}} will be your driver!</span>
   </div>
 </div>
 <!-- </div> -->
@@ -47,7 +47,7 @@
 </body>
 <script>
 setTimeout(function (){
-  $("#notification").fadeIn("slow").append('Your driver is on the way. Eta 5 minutes')}, 3000 )
+  $("#notification").fadeIn("slow").append('Your driver is on the way. ETA 5 minutes')}, 8000 )
   $(".dismiss").click(function(){
        $("#notification").fadeOut("slow");
 });
