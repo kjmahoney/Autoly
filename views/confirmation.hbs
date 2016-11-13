@@ -11,7 +11,7 @@
     <p>Scheduled Pick up at: </p>
       <form>
         Address
-        <select id="addressList">
+        <select id="addressList1">
           <option>Home: {{homeAddress}}</option>
           <option>Work: {{workAddress}}</option>
         </select>
@@ -38,10 +38,16 @@
       <input type="time" name="time">
     </form>
 
+<div class="row">
+
     <form>
-      <label for="checkbox">return to address</label>
-      <input type="checkbox" name="checkbox" value="">
+      <label id ="checkbox" for="checkbox">return to address</label>
+      <input type="checkbox" name="checkbox" value="" onclick ="showAddress()">
     </form>
+
+    <p id = "outputField"></p>
+
+</div>
 
     <div class="arriveWrapper">
             <div class="clear"></div>
@@ -56,6 +62,15 @@
     </a>
 
     </div>
+
+    <script>
+    function showAddress(){
+    console.log("yes")
+    theAddress =  $('#addressList1').val()
+    console.log(theAddress)
+    $('#outputField').text(theAddress)
+  }
+    </script>
 
   </body>
 </html>

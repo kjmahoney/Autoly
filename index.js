@@ -16,7 +16,7 @@ app.get("/confirmation", (req, res) => {
   res.render("confirmation", {user: user, priceEstimate:priceEstimate, homeAddress:homeAddress,
     workAddress:workAddress, dropOffAddress: dropOffAddress})
 })
-//hello
+
 //CHECKOUT: PAGE 3-Reaffirm transaction
 app.get("/checkout", (req, res) => {
 
