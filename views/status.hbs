@@ -5,27 +5,42 @@
     <title></title>
   </head>
 <body class="statusPage">
+  
     <div class="form-style-2">
-  <div class="form-style-2-heading">Pick-up confirmed at "PLACE HOLDER FOR TIME"</div>
+  <div class="form-style-2-heading">Pick-up confirmed at: 11:00am December 13th 2016</div>
 
   <form action="" method="post">
-  <label for="field1"><span>Pickup <span class="required">*</span></span><input type="text" class="input-field" name="field1" value="" /></label>
-  <label for="field2"><span>DropOff <span class="required">*</span></span><input type="text" class="input-field" name="field2" value="" /></label>
-  <img src="{{randDriver.img_url}}">
-  <!-- <label><span>Telephone</span><input type="text" class="tel-number-field" name="tel_no_1" value="" maxlength="4" />-<input type="text" class="tel-number-field" name="tel_no_2" value="" maxlength="4"  />-<input type="text" class="tel-number-field" name="tel_no_3" value="" maxlength="10"  /></label> -->
-  <!-- <label for="field4"><span>Regarding</span><select name="field4" class="select-field"> -->
-  <!-- <option value="General Question">General</option>
-  <option value="Advertise">Advertisement</option>
-  <option value="Partnership">Partnership</option> -->
+
+  <div class="input_container">
+    <label for="field1"><span>Pickup</span><input type="text" class="input-field" name="field1" value="" /></label>
+    <img src="https://image.freepik.com/free-icon/home_318-42210.jpg" class="input_img">
+  </div>
+  <div class="input_container">
+    <label for="field2"><span>DropOff</span><input type="text" class="input-field" name="field2" value="" /></label>
+    <img src="http://www.brothersautomotive.org/img/2236/155.png?sitetimestamp=636079452870000000" class="input_img">
+  </div>
+
+
+
   </select></label>
-  <label for="field5"><span>Notes <span class="required">*</span></span><textarea name="field5" class="textarea-field"></textarea></label>
+  <label for="field5"><span>Notes</span><textarea name="field5" class="textarea-field"></textarea></label>
 
   <a href="/1">
   <label><span>&nbsp;</span><input type="button" value="Home" /></label>
   </a>
   </div>
-  
 
+
+
+<div class="column">
+
+
+  <div class="driverInfo">
+  <img id="driverImg" src="{{randDriver.img_url}}">
+  <span>{{randDriver.firstName}} is on the way!</span>
+</div>
+
+</div>
 
 </body>
 </html>
